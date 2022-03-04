@@ -1,13 +1,12 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <comp-header
-      v-bind:titleHeader="titleHeader"
-      v-on:changeTitleEven="handlerChangeTitle"></comp-header>
     <div class="container">
+      <comp-header v-bind:titleHeader="titleHeader" v-on:changeTitleEven="handlerChangeTitle"></comp-header>
       <list-user v-bind:listUser="listUser"></list-user>
+      <demo-ref></demo-ref>
+      <comp-footer v-bind:titleFooter="titleFooter"></comp-footer>
     </div>
-    <comp-footer v-bind:titleFooter="titleFooter"></comp-footer>
   </div>
 </template>
 
@@ -15,6 +14,7 @@
 import CompHeader from "./components/CompHeader";
 import CompFooter from "./components/CompFooter";
 import ListUser from "./components/ListUser";
+import DemoRef from "./components/DemoRef";
 
 export default {
   name: 'app',
@@ -35,7 +35,8 @@ export default {
   components: {
     CompHeader,
     CompFooter,
-    ListUser
+    ListUser,
+    DemoRef
   },
   methods: {
     handlerChangeTitle(data) {
