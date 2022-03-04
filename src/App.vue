@@ -5,6 +5,7 @@
       <comp-header v-bind:titleHeader="titleHeader" v-on:changeTitleEven="handlerChangeTitle"></comp-header>
       <list-user v-bind:listUser="listUser"></list-user>
       <demo-ref></demo-ref>
+      <demo-slot></demo-slot>
       <comp-footer v-bind:titleFooter="titleFooter"></comp-footer>
     </div>
   </div>
@@ -15,6 +16,7 @@ import CompHeader from "./components/CompHeader";
 import CompFooter from "./components/CompFooter";
 import ListUser from "./components/ListUser";
 import DemoRef from "./components/DemoRef";
+import DemoSlot from "./components/DemoSlot";
 
 export default {
   name: 'app',
@@ -36,7 +38,8 @@ export default {
     CompHeader,
     CompFooter,
     ListUser,
-    DemoRef
+    DemoRef,
+    DemoSlot
   },
   methods: {
     handlerChangeTitle(data) {
